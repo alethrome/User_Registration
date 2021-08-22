@@ -24,43 +24,43 @@ export const StudentForm = ({ student, onSubmit }) => {
                 <input className="form-control"
                        {...register('lastName')}
                        type="text"
-                       id="text"
+                       id="lastName"
                 />
                 <label htmlFor="text">First Name:</label>
                 <input className="form-control"
                        {...register('firstName')}
                        type="text"
-                       id="text"
+                       id="firstName"
                 />
                 <label htmlFor="text">Middle Name:</label>
                 <input className="form-control"
                        {...register('midName')}
                        type="text"
-                       id="text"
+                       id="midName"
                 />
                 <label htmlFor="text">Birthdate:</label>
                 <input className="form-control"
                        {...register('bDay')}
                        type="text"
-                       id="text"
+                       id="bDay"
                 />
                 <label htmlFor="text">Gender:</label>
                 <input className="form-control"
                        {...register('gender')}
                        type="text"
-                       id="text"
+                       id="gender"
                 />
                 <label htmlFor="text">Student Number:</label>
                 <input className="form-control"
                        {...register('studentID')}
                        type="text"
-                       id="text"
+                       id="studentID"
                 />
                 <label htmlFor="text">Email:</label>
                 <input className="form-control"
                        {...register('email')}
                        type="text"
-                       id="text"
+                       id="email"
                 />
             </div>
             <div className="form-group">

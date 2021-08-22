@@ -9,6 +9,7 @@ export const AddStudent = () => {
     const onSubmit = async (data) => {
         await addStudent(data)
         history.push("/")
+        console.log(data)
     };
 
     return (

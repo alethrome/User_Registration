@@ -27,11 +27,11 @@ app.get("/", (req, res) => {
 });
 
 app.post("/create", (req, res) => {
-    const Student = new Student(req.body);
-    Student
+    const student = new Student(req.body);
+    student
         .save()
-        .then((Student) => {
-            res.json(Student);
+        .then((student) => {
+            res.json(student);
         })
         .catch((err) => {
             res.status(500).send(err.message);
@@ -47,22 +47,22 @@ app.get("/:id", (req, res) => {
 
 app.post("/:id", (req, res) => {
     const id = req.params.id;
-    Student.findById(id, (err, Student) => {
-        if (!Student) {
+    Student.findById(id, (err, student) => {
+        if (!student) {
             res.status(404).send("Student not found");
         } else {
-            Student.lastName = req.body.lastName;
-            Student.firstName = req.body.firstName;
-            Student.midName = req.body.midName;
-            Student.bDay = req.body.bDay;
-            Student.gender = req.body.gender;
-            Student.studentID = req.body.studentID;
-            Student.email = req.body.email;
+            student.lastName = req.body.lastName;
+            student.firstName = req.body.firstName;
+            student.midName = req.body.midName;
+            student.bDay = req.body.bDay;
+            student.gender = req.body.gender;
+            student.studentID = req.body.studentID;
+            student.email = req.body.email;
 
-            Student
+            student
                 .save()
-                .then((Student) => {
-                    res.json(Student);
+                .then((student) => {
+                    res.json(student);
                 })
                 .catch((err) => res.status(500).send(err.message));
         }
