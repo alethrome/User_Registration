@@ -11,7 +11,7 @@ const Student = mongoose.Schema({
         type: String,
     },
     bDay: {
-        type: String,
+        type: Date,
     },
     gender: {
         type: String,
