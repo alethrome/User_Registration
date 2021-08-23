@@ -54,8 +54,8 @@ export const StudentForm = ({ student, onSubmit }) => {
                         id="gender"
                         required
                 >
-                    <option value="volvo">Male</option>
-                    <option value="saab">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
                 </select>
                 <label htmlFor="text">Student Number:</label>
                 <input className="form-control"

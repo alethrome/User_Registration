@@ -1,18 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { getStudents } from "./api";
+import axios from 'axios';
 
 export const Register = () => {
 
     const [items, setItems] = useState([])
 
     useEffect(() => {
-        const fetchItems = async () => {
-            const details = await getStudents()
-            setItems(details)
-        }
-        fetchItems()
+        axios.get("http://localhost:4000/")
+            .then((response) => {
+                setItems(response.data)
+            })
     }, [])
+
+    const deleteStudent = (id) => {
+        axios.delete(`http://localhost:4000/delete/${id}`).then(
+            () => {
+                setItems(
+                    items.filter((val) => {
+                        return val._id != id;
+                    })
+                );
+            }
+        );
+    };
+
+    // const deleteStudent = async (e, id) => {
+    //     // const delInfo = e.currentTarget;
+    //     // delInfo.innerText = "Deleting";
+    //
+    //     const res = await axios.delete(`http://localhost:4000/delete/${id}`);
+    //     if (res.data.status === 200) {
+    //         //delInfo.closest("tr").remove();
+    //         console.log(res.data.message);
+    //     }
+    // };
 
     return (
         <div className="container">
@@ -58,6 +80,11 @@ export const Register = () => {
                                 </td>
                                 <td>
                                     <Link to={`/edit/${deets._id}`}>Edit</Link>
+                                </td>
+                                <td>
+                                    <button onClick={() => {
+                                        deleteStudent(deets._id)
+                                    }}>Delete</button>
                                 </td>
                             </tr>
                         ))

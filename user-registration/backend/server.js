@@ -69,6 +69,12 @@ app.post("/:id", (req, res) => {
     });
 });
 
+app.delete('/delete/:id', async (req, res) => {
+    const id = req.params.id;
+    await Student.findByIdAndRemove(id).exec();
+    res.send("Item Deleted");
+})
+
 app.listen(PORT, () => {
     console.log("Server is running on port " + PORT);
 });
