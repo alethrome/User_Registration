@@ -25,17 +25,6 @@ export const Register = () => {
         );
     };
 
-    // const deleteStudent = async (e, id) => {
-    //     // const delInfo = e.currentTarget;
-    //     // delInfo.innerText = "Deleting";
-    //
-    //     const res = await axios.delete(`http://localhost:4000/delete/${id}`);
-    //     if (res.data.status === 200) {
-    //         //delInfo.closest("tr").remove();
-    //         console.log(res.data.message);
-    //     }
-    // };
-
     return (
         <div className="container">
             <div className="mt-3">

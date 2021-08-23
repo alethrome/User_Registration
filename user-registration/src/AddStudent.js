@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {StudentForm} from "./StudentForm";
 import { addStudent } from "./api";
 import {useHistory} from "react-router-dom";
-import axios from 'axios';
 
 export const AddStudent = () => {
     const history = useHistory()
