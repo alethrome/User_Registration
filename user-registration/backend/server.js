@@ -54,7 +54,6 @@ app.post("/:id", (req, res) => {
             student.lastName = req.body.lastName;
             student.firstName = req.body.firstName;
             student.midName = req.body.midName;
-            student.bDay = req.body.bDay;
             student.gender = req.body.gender;
             student.studentID = req.body.studentID;
             student.email = req.body.email;

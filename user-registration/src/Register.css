@@ -1,0 +1,18 @@
+h3 {
+    color: #E85A4F;
+    margin-top: 2rem;
+    font-weight: normal;
+}
+
+th {
+    color: #E98074;
+    font-weight: normal;
+}
+
+td {
+    color: #555555;
+}
+
+table {
+    margin-top: 20px;
+}

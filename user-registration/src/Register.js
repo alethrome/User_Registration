@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import './Register.css';
 
 export const Register = () => {
 
@@ -18,7 +19,7 @@ export const Register = () => {
             () => {
                 setItems(
                     items.filter((val) => {
-                        return val._id != id;
+                        return val._id !== id;
                     })
                 );
             }
@@ -28,18 +29,16 @@ export const Register = () => {
     return (
         <div className="container">
             <div className="mt-3">
-                <h3>Student List</h3>
-                <table className = "table table-striped mt-3">
+                <h3>STUDENT LIST</h3>
+                <table className = "table mt-3">
                     <thead>
                     <tr>
                         <th>Last Name</th>
                         <th>First Name</th>
                         <th>Middle Name</th>
-                        <th>Birthdate</th>
                         <th>Gender</th>
                         <th>Student ID</th>
                         <th>Student Email</th>
-                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -56,9 +55,6 @@ export const Register = () => {
                                     {deets.midName}
                                 </td>
                                 <td>
-                                    {deets.bDay}
-                                </td>
-                                <td>
                                     {deets.gender}
                                 </td>
                                 <td>
@@ -68,10 +64,10 @@ export const Register = () => {
                                     {deets.email}
                                 </td>
                                 <td>
-                                    <Link to={`/edit/${deets._id}`}>Edit</Link>
+                                    <Link style={{ color: 'inherit', textDecoration: 'inherit', borderStyle: 'solid', padding: '5px', borderColor: '#D8C3A5'}} to={`/edit/${deets._id}`}>Edit</Link>
                                 </td>
                                 <td>
-                                    <button onClick={() => {
+                                    <button style={{ color: 'inherit', textDecoration: 'inherit', border: 'solid', borderColor: '#D8C3A5', backgroundColor: '#D8C3A5', marginTop: '0'}} onClick={() => {
                                         deleteStudent(deets._id)
                                     }}>Delete</button>
                                 </td>

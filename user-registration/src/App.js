@@ -3,17 +3,18 @@ import { Route, Switch, Link } from 'react-router-dom';
 import {AddStudent} from './AddStudent';
 import {EditStudent} from './EditStudent';
 import {Register} from './Register';
+import './App.css';
 
 function App() {
     return (
         <div>
-            <nav className="navbar bg-light navbar-expand-lg navbar-light">
+            <nav className="navbar navbar-expand-lg navbar-light">
                 <ul className="navbar-nav mr-auto">
                     <li className="navbar-item">
-                        <Link to="/" className="nav-link">Student List</Link>
+                        <Link to="/" style={{ color: 'black'}} className="nav-link">Student List</Link>
                     </li>
-                    <li className="navbar=item">
-                        <Link to="/create" className="nav-link">Registration</Link>
+                    <li className="navbar-item nav2">
+                        <Link to="/create" style={{ color: 'black'}} className="nav-link">Registration</Link>
                     </li>
                 </ul>
             </nav>

@@ -1,12 +1,12 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import './StudentForm.css';
 
 export const StudentForm = ({ student, onSubmit }) => {
     const {register, handleSubmit} = useForm({
         defaultValues: { lastName: student ? student.lastName : "",
             firstName: student ? student.firstName : "",
             midName: student ? student.midName : "",
-            bDay: student ? student.bDay : "",
             gender: student ? student.gender : "",
             studentID: student ? student.studentID : "",
             email: student ? student.email : "",
@@ -41,13 +41,6 @@ export const StudentForm = ({ student, onSubmit }) => {
                        id="midName"
                        required
                 />
-                <label htmlFor="text">Birthdate:</label>
-                <input className="form-control"
-                       {...register('bDay')}
-                       type="date"
-                       id="bDay"
-                       required
-                />
                 <label htmlFor="text">Gender:</label>
                 <select className="form-control"
                         {...register('gender')}
@@ -75,7 +68,7 @@ export const StudentForm = ({ student, onSubmit }) => {
                 />
             </div>
             <div className="form-group">
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn">
                     Save student
                 </button>
             </div>

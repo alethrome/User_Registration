@@ -32,3 +32,4 @@ export const EditStudent = () => {
         <div>Loading...</div>
     );
 };
+

@@ -10,9 +10,6 @@ const Student = mongoose.Schema({
     midName: {
         type: String,
     },
-    bDay: {
-        type: Date,
-    },
     gender: {
         type: String,
     },

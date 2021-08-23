@@ -1,0 +1,16 @@
+.form-control {
+    background-color: #EAE7DC;
+    border-color: #D8C3A5;
+}
+
+label {
+    color: #555555;
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+.btn {
+    background-color: #D8C3A5;
+}
